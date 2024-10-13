@@ -1,0 +1,125 @@
+PSUEDOCODE
+
+Start
+Phonebook = Contactlist[]
+Prompt the user for contact list
+Get contactList
+fuctionMenu = 0
+Promt the user for functionMenu
+Get FunctionMenu
+FUNCTION ShowMenu()
+PRINT "1. Insert Contact"
+PRINT "2. Search Contact"
+PRINT "3. Display All Contacts"
+PRINT "4. Delete Contact"
+PRINT "5. Update Contact"
+PRINT "6. Sort Contacts"
+PRINT "7. Analyze Search Efficiency"
+PRINT "8. Exit"
+END FUNCTION
+FUNCTION InsertContact()
+PRINT "Enter Name:"
+Name = GET input
+PRINT "Enter Phone Number:"
+PhoneNumber = GET input
+IF ValidateContactDetails(Name, PhoneNumber) THEN
+Add (Name, PhoneNumber) to Phonebook
+PRINT "Contact added successfully."
+ELSE
+PRINT "Invalid contact details."
+END IF
+END FUNCTION
+FUNCTION SearchContact()
+PRINT "Enter Name to Search:"
+Name = GET input
+FOUND = False
+FOR (Contact: Phonebook)
+IF (Contact.Name == Name) THEN
+PRINT "Contact found:", Contact
+FOUND = True
+END IF
+END FOR
+IF (Contact NOT FOUND) THEN
+PRINT "Contact not found."
+END IF
+END FUNCTION
+FUNCTION DisplayAllContacts()
+IF Phonebook is empty THEN
+PRINT "No contacts to display."
+ELSE
+FOR (Contact: Phonebook)
+PRINT Contact
+END FOR
+END IF
+END FUNCTION
+FUNCTION DeleteContact()
+PRINT "Enter Name to Delete:"
+Name = GET input
+FOUND = False
+FOR( Contact: Phonebook)
+IF (Contact.Name == Name) THEN
+REMOVE Contact from Phonebook
+PRINT "Contact deleted successfully."
+FOUND = True
+END IF
+END FOR
+IF(Contact NOT FOUND) THEN
+PRINT "Contact not found."
+END IF
+END FUNCTION
+
+FUNCTION UpdateContact()
+PRINT "Enter Name to Update:"
+Name = GET input
+FOUND = False
+FOR (Contact: Phonebook)
+IF (Contact.Name == Name) THEN
+PRINT "Enter new Phone Number:"
+NewPhone = GET input
+Contact.PhoneNumber = NewPhone
+PRINT "Contact updated successfully."
+FOUND = True
+END IF
+END FOR
+IF (Contact NOT FOUND) THEN
+PRINT "Contact not found."
+END IF
+END FUNCTION
+FUNCTION SortContacts()
+SORT Phonebook by Name
+PRINT "Contacts sorted."
+END FUNCTION
+FUNCTION AnalyzeSearchEfficiency()
+PRINT "Enter Name to Search:"
+Name = GET input
+STARTTIME = GET current time
+CALL SearchContact()
+ENDTIME = GET current time
+ElapsedTime = ENDTIME - STARTTIME
+PRINT "Search took:", ElapsedTime, "seconds"
+END FUNCTION
+WHILE (Function==True)
+CALL ShowMenu()
+PRINT "Choose an option:"
+Option = GET input
+IF(Option == 1) THEN
+CALL InsertContact()
+ELSE IF (Option == 2) THEN
+CALL SearchContact()
+ELSE IF(Option == 3) THEN
+CALL DisplayAllContacts()
+ELSE IF(Option == 4) THEN
+CALL DeleteContact()
+ELSE IF(Option == 5) THEN
+CALL UpdateContact()
+ELSE IF(Option == 6) THEN
+CALL SortContacts()
+ELSE IF(Option == 7) THEN
+CALL AnalyzeSearchEfficiency()
+ELSE IF(Option == 8) THEN
+PRINT "Exiting the program..."
+ELSE
+PRINT "Invalid option, please try again."
+END IF
+END WHILE
+END
