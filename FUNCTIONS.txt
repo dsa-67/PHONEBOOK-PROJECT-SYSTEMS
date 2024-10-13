@@ -1,0 +1,46 @@
+FUNCTIONS
+
+The Phonebook Management System enables efficient contact management for a Namibian telecom company. It provides functions for adding, searching, updating, and deleting contacts using basic data structures.
+  
+Insert Contact
+
+1.Adds a new contact by taking the user’s input for name and phone number.
+2.Validates the phone number and email before adding the contact.
+3.If valid, the contact is added to the phonebook; otherwise, an error message is shown.
+
+Search Contact
+
+1.Searches for a contact by name in the phonebook.
+2.Iterates through the contact list and returns the contact’s details if found.
+3.If no contact is found, an error message is displayed.
+
+Display All Contacts
+
+1.Displays all stored contacts with their name and phone number.
+2.If the phonebook is empty, informs the user that there are no contacts.
+
+Delete Contact
+
+1.Deletes a contact based on the user-provided name.
+2.Searches the phonebook and, if the contact exists, removes it from the list.
+3.If the contact is not found, an error message is shown.
+
+Update Contact
+
+1.Updates the phone number and/or email of an existing contact.
+2.The user provides the contact’s name and new details for validation.
+3.If valid, the contact is updated; otherwise, an error or "contact not found" message is shown.
+
+Sort Contacts (Optional)
+
+1.Sorts the contacts alphabetically by name to improve search efficiency.
+2.Uses a sorting algorithm like bubble sort or quicksort to arrange contacts.
+3.After sorting, searches can be performed faster.
+
+Analyze the Efficiency of Search Algorithm
+
+1.Evaluates the time complexity of the search operation (linear search or binary search).
+2.If the contacts are unsorted, the search algorithm has linear complexity (O(n)).
+3.If sorting is implemented, binary search can reduce the complexity to O(log n).Insert Contact
+
+The Phonebook Management System efficiently handles contact information for a Namibian telecommunications company using simple data structures. It supports key operations like adding, searching, updating, and deleting contacts, with optional sorting for improved search efficiency. This project highlights the practicality of basic data structures in real-world applications.
