@@ -10,7 +10,7 @@ Utility: Provides helper functions for validating inputs and formatting contact 
 How to Use:
 Instructions on how to compile and run the application are included, and the project is compiled under the name provided.  
 
-This projected compiled by:
+This project compiled by:
 TOMAS M PETRUS(222038861),
 SAMUEL SHOMOKUTI(223042935),
 TOMAS LINUS(224092189),
